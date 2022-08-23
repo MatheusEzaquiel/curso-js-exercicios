@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>
+        Get value of selected
+        radio button
+    </title>
+</head>
+  
+<body>
+      
+    Sexo:
+    <input type="radio" name="sexo" value="Masculino">M <!--0-->
+    <input type="radio" name="sexo" value="Feminino">F <!--1-->
+    <input type="radio" name="sexo" value="Outro">Outro <!--2-->
+      
+    <br>
+      
+    <button type="button" onclick="displayRadioValue()">
+        Submit
+    </button>
+      
+    <br>
+      
+    <div id="result"></div>
+      
+    <script>
+        function displayRadioValue() {
+            var sexo = document.getElementsByName('sexo');
+              
+            for(i = 0; i < sexo.length; i++) {
+                if(sexo[i].checked)
+
+                    
+                document.getElementById("result").innerHTML
+                        = "Sexo: "+sexo[i].value;
+            }
+        }
+    </script>
+</body>
+</html>    

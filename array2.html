@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>array2</title>
+</head>
+<body>
+	<form action="" method="">
+		<label>Nome</label>
+		<input type="text" id="nome" name="nome">	
+		<button type="button" id="botao"  name="botao">Click</button>
+		<!--
+		<label>Idade</label>
+		<input type="number" name="idade" id="idade">
+		
+		-->
+		<div id="result"></div>
+	</form>
+	<script>
+		let btn = document.getElementById("botao")
+		btn.addEventListener("click",array)
+
+		let result = document.getElementById("result")
+
+		function array(){
+			if(clientes.length != 1){
+				result.innerHTML = `Novo cliente cadastrado: ${nome}`
+
+				clientes[1] = nome
+				console.log(clientes)
+				cont = cont + 1
+			}else{
+				let nome = document.getElementById("nome").value
+				result.innerHTML = `Novo cliente cadastrado: ${nome}`
+
+			
+			
+			//let idade = document.getElementById("idade").value
+
+			/*
+			clientes[1] = idade	
+			clientes[2] = nome
+			
+			let clientes = [nome] //0
+
+			while(clientes.length != 1){
+				clientes[1] = nome
+				console.log(clientes)
+				cont = cont + 1
+			}
+			
+			
+			console.log(clientes)
+			*/
+
+		}
+
+
+		
+
+
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Informações de Usuário</title>
+	<style>
+		body{
+			font: normal 12pt arial;
+		}
+		h1{
+			text-align:  center;
+		}
+		p{
+			text-align: left;
+		}
+		form{
+			margin:  auto;
+			width:  300px;
+		}
+		input.inputA{
+			width: 100%;
+			padding: 3px;
+			margin-bottom: 8px;
+		}
+		input.inputB{
+			margin-top: 10px;
+			margin-bottom: 20px;
+		}
+		select.inputRegiao{
+			margin-top: 15px;
+			width: 100%;
+		}
+		#opcSexo{
+			margin-top: 18px;
+			padding: 5px;
+			font: normal 11pt arial;
+		}
+		#result{
+			margin-top:  5px;
+			background: gray;
+			padding: 10px;
+			border-radius: 6px;
+			text-align: center;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<h1>Cadastro de usuário</h1>
+	<form action="" method="">
+		<label>Nome:</label><input type="text" id="nome" name="nome" class="inputA">
+		<label>Sobrenome:</label><input type="text" id="sobrenome" name="sobrenome" class="inputA">
+		<label>Idade:</label><input type="text" id="idade" name="idade" class="inputA">
+		<label>Região:</label>
+		<select class="inputRegiao" id="regiao" name="regiao">
+			<option value="norte">Norte</option>
+			<option value="nordeste">Nordeste</option>
+			<option value="centro-oeste">Centro-oeste</option>
+			<option value="sul">Sul</option>
+			<option value="suldeste">Suldeste</option>
+		</select>
+		<div id="opcSexo">
+			<input type="radio" selected id="masculino" name="sexo" class="inputB" value="masculino">Masculino
+			<input type="radio" id="feminino" name="sexo" class="inputB" value="feminino">Feminino
+			<input type="radio" id="outro" name="sexo" class="inputB" value="outro">Não informar 
+		</div>
+		<button type="button" id="btnCadastro" class="btnCadastro inputB">Cadastro</button>
+
+		<div id="result" name="result">...</div>
+
+	</form>
+	<script>
+		let btn = document.getElementById("btnCadastro")
+		btn.addEventListener("click",cadastro)
+
+		let result = document.getElementById("result")
+
+		function cadastro(){
+			let nome = document.getElementById("nome").value
+			let sobrenome = document.getElementById("sobrenome").value
+			let idade = document.getElementById("idade").value
+			let regiao = document.getElementById("regiao").value
+			let sexo = document.getElementsByName("sexo")
+             
+            result.innerHTML = `<p>| nome: ${nome} <br>| sobrenome: ${sobrenome} <br>| idade: ${idade} <br>| região: ${regiao} |<br></p>`
+
+            for(i = 0; i < sexo.length; i++) {
+                if(sexo[i].checked)
+                    
+                result.innerHTML
+                        += `<p>| Sexo: ${sexo[i].value}</p>`;
+            }
+
+		}
+
+
+		
+	</script>
+</body>
+</html>

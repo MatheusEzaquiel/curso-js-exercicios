@@ -1,0 +1,9 @@
+function fatorial(n){
+    cont = n
+    while(cont <= n && cont > 0){
+        result = n
+        n - 1 
+        result*n
+    }
+}
+console.log(fatorial(5))
